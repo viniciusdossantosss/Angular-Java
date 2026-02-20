@@ -4,11 +4,12 @@ import io.getarrays.server.enumeration.Status;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
 import jakarta.validation.constraints.NotEmpty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.data.annotation.Id;
+
 
 import static jakarta.persistence.GenerationType.AUTO;
 
@@ -24,7 +25,7 @@ public class Server {
     private Long id;
     @Column(unique = true)
     @NotEmpty(message = "IP Adress cannot be empty or null")
-    private String ipAdress;
+    private String ipAddress;
     private String name;
     private String memory;
     private String type;
